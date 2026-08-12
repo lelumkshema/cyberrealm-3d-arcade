@@ -1,0 +1,22 @@
+🚀 Excited to announce CyberRealm 3D — an open-source 3D WebGL Vehicle Combat & Procedural Audio Engine Architecture! 🎮⚡
+
+I have been working on building a lightweight, zero-asset 3D simulation framework inside client browsers using Three.js, React, Web Audio API, and Speech Synthesis AI.
+
+✨ Key Innovations & Features:
+🔹 Procedural 3D WebGL Engine: Real-time Three.js rendering with 3rd-person chase camera, dynamic lighting & atmospheric fog.
+🔹 Homing Missile Kinematics & EMP Blast: Vector-calculated missile trajectories with particle smoke trails and expanding plasma shockwaves.
+🔹 360° Interactive 3D Armory Garage: Real-time vehicle customization, paint coat swapping, and neon underglow shaders.
+🔹 Zero-Asset Procedural Audio & Voice AI: Web Audio API sound synthesis and real-time military briefing voice announcements.
+
+📊 Experimental Evaluation Results:
+✅ Consistent 60 FPS Frame Rate across standard devices
+✅ 1.42s Production Compilation (Vite 6)
+✅ 216 KB Gzip Bundle Size (Zero external 3D mesh overhead!)
+
+📄 Read the full Research Paper (PDF):
+https://github.com/lelumkshema/cyberrealm-3d-arcade/blob/main/Research_Paper_CyberRealm.pdf
+
+💻 Explore the GitHub Repository & Source Code:
+https://github.com/lelumkshema/cyberrealm-3d-arcade
+
+#WebGL #ThreeJS #ReactJS #JavaScript #3DGraphics #WebAudioAPI #GameDevelopment #OpenSource #SoftwareEngineering #ResearchGate #TechInnovation
