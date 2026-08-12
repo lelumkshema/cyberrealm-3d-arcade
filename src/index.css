@@ -1,0 +1,220 @@
+:root {
+  --color-bg-dark: #0a0c14;
+  --color-bg-card: #121624;
+  --color-bg-glass: rgba(18, 22, 36, 0.75);
+  --color-primary: #00f3ff;
+  --color-secondary: #ff0055;
+  --color-accent-purple: #a855f7;
+  --color-accent-gold: #ffb703;
+  --color-accent-green: #00ff88;
+  --color-text-main: #f3f4f6;
+  --color-text-muted: #9ca3af;
+  --color-border-glow: rgba(0, 243, 255, 0.3);
+  
+  --font-display: 'Orbitron', sans-serif;
+  --font-retro: 'Press Start 2P', monospace;
+  --font-body: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(0, 243, 255, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(255, 0, 85, 0.08) 0%, transparent 45%),
+    linear-gradient(to bottom, #07090e 0%, #0d101a 100%);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090b12;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+  box-shadow: 0 0 10px var(--color-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+/* Typography Classes */
+.font-orbitron {
+  font-family: var(--font-display);
+}
+.font-retro {
+  font-family: var(--font-retro);
+}
+.font-outfit {
+  font-family: var(--font-body);
+}
+
+/* Cyberpunk Glass Card */
+.glass-card {
+  background: var(--color-bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 243, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 243, 255, 0.6);
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.25), 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glass-card-magenta {
+  background: rgba(25, 12, 28, 0.8);
+  border: 1px solid rgba(255, 0, 85, 0.3);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+}
+.glass-card-magenta:hover {
+  border-color: rgba(255, 0, 85, 0.7);
+  box-shadow: 0 0 20px rgba(255, 0, 85, 0.3);
+}
+
+/* Neon Glow Effect Helpers */
+.glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.7), 0 0 20px rgba(0, 243, 255, 0.4);
+}
+.glow-magenta {
+  text-shadow: 0 0 10px rgba(255, 0, 85, 0.7), 0 0 20px rgba(255, 0, 85, 0.4);
+}
+.glow-gold {
+  text-shadow: 0 0 10px rgba(255, 183, 3, 0.7), 0 0 20px rgba(255, 183, 3, 0.4);
+}
+
+.btn-cyan {
+  background: linear-gradient(135deg, rgba(0, 243, 255, 0.2) 0%, rgba(0, 243, 255, 0.05) 100%);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+}
+.btn-cyan:hover {
+  background: var(--color-primary);
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.8);
+  transform: translateY(-2px);
+}
+.btn-cyan:active {
+  transform: translateY(0);
+}
+
+.btn-magenta {
+  background: linear-gradient(135deg, rgba(255, 0, 85, 0.2) 0%, rgba(255, 0, 85, 0.05) 100%);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(255, 0, 85, 0.2);
+}
+.btn-magenta:hover {
+  background: var(--color-secondary);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 0, 85, 0.8);
+  transform: translateY(-2px);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, rgba(255, 183, 3, 0.2) 0%, rgba(255, 183, 3, 0.05) 100%);
+  border: 1px solid var(--color-accent-gold);
+  color: var(--color-accent-gold);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+.btn-gold:hover {
+  background: var(--color-accent-gold);
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 183, 3, 0.8);
+  transform: translateY(-2px);
+}
+
+/* CRT Scanline Effect Overlay for Arcade feel */
+.scanlines {
+  position: relative;
+  overflow: hidden;
+}
+.scanlines::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Neon Badge */
+.neon-badge {
+  font-family: var(--font-retro);
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  background: rgba(0, 243, 255, 0.1);
+  letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.8);
+  }
+}
+.animated-glow {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+.float-anim {
+  animation: float 4s ease-in-out infinite;
+}
