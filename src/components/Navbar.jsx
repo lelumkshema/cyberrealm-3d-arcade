@@ -1,6 +1,6 @@
 import React from 'react';
 import { soundEngine } from '../utils/soundEngine';
-import { Gamepad2, ShoppingBag, Trophy, Volume2, VolumeX, Car } from 'lucide-react';
+import { Gamepad2, ShoppingBag, Trophy, Volume2, VolumeX, Car, FileText } from 'lucide-react';
 
 export default function Navbar({ activeTab, setActiveTab, credits, isMuted, setIsMuted }) {
   const toggleAudio = () => {
@@ -66,6 +66,15 @@ export default function Navbar({ activeTab, setActiveTab, credits, isMuted, setI
           >
             <Trophy size={16} /> RANKS
           </button>
+
+          <a
+            href="/paper.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-2 text-cyan-300 hover:text-white transition-all bg-cyan-950/40 border border-cyan-500/30"
+          >
+            <FileText size={16} /> RESEARCH PAPER
+          </a>
         </div>
 
         {/* Right Status */}
@@ -82,37 +91,6 @@ export default function Navbar({ activeTab, setActiveTab, credits, isMuted, setI
             {isMuted ? <VolumeX size={18} className="text-red-400" /> : <Volume2 size={18} />}
           </button>
         </div>
-      </div>
-
-      {/* Mobile Nav Bar */}
-      <div className="flex md:hidden items-center justify-around mt-3 pt-3 border-t border-cyan-500/10">
-        <button
-          onClick={() => { soundEngine.playMenuClick(); setActiveTab('hub'); }}
-          className={`text-xs font-orbitron flex flex-col items-center gap-1 ${activeTab === 'hub' ? 'text-cyan-400 font-bold' : 'text-gray-400'}`}
-        >
-          <Gamepad2 size={16} /> HUB
-        </button>
-
-        <button
-          onClick={() => { soundEngine.playMenuClick(); setActiveTab('garage'); }}
-          className={`text-xs font-orbitron flex flex-col items-center gap-1 ${activeTab === 'garage' ? 'text-yellow-400 font-bold' : 'text-gray-400'}`}
-        >
-          <Car size={16} /> 3D CAR
-        </button>
-
-        <button
-          onClick={() => { soundEngine.playMenuClick(); setActiveTab('shop'); }}
-          className={`text-xs font-orbitron flex flex-col items-center gap-1 ${activeTab === 'shop' ? 'text-magenta-400 font-bold' : 'text-gray-400'}`}
-        >
-          <ShoppingBag size={16} /> SHOP
-        </button>
-
-        <button
-          onClick={() => { soundEngine.playMenuClick(); setActiveTab('leaderboard'); }}
-          className={`text-xs font-orbitron flex flex-col items-center gap-1 ${activeTab === 'leaderboard' ? 'text-cyan-400 font-bold' : 'text-gray-400'}`}
-        >
-          <Trophy size={16} /> RANKS
-        </button>
       </div>
     </nav>
   );
