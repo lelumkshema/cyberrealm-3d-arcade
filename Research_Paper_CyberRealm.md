@@ -1,7 +1,6 @@
 # CyberRealm: A Real-Time 3D WebGL Vehicle Combat and Procedural Web Audio Engine Architecture for Interactive Browser-Based Simulations
 
-**Authors:** L. Kshema<sup>1</sup>  
-<sup>1</sup> Department of Computer Science & Software Engineering  
+**Authors:** L. Kshema  
 *Target Publication: ResearchGate / IEEE Open Access Preprints*  
 *Date: August 2026*
 
